@@ -1,0 +1,100 @@
+<% provide(:title, 'Home') %>
+
+<ul id="menu">
+  <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+  <li><%= link_to 'Blog', '#' %></li>
+  <li><%= link_to 'About', '#' %></li>
+</ul>
+
+<div id="fullpage">
+  <div class="section" id="section0">
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+    <div class="container">
+    <div class="intro">
+      <div class="avatar">
+      <%= image_tag("avatar.jpg", alt: "avatar") %>
+      </div>
+      <h1>LinuxGit</h1>
+      <div class="devider"></div>
+      <p>I'm Louis.</p>
+      <p>And I'm a Linux SA who wants to be a Full Stack developer.</p>
+      <div class="devider--secondary"></div>
+      <p>It's a web about Design, Ruby, Rails, Python, Swift, Linux and Network.</p>
+      <button type="button" class="btn btn-primary btn-lg">Get Started</button>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+      <div class="navigation">
+      <ul>
+        <li class="navigation__item">
+        <a href="https://github.com/LinuxGit" title="Github" target="_blank">
+          <i class='fa fa-github'></i>
+        </a>
+        </li>
+        <li class="navigation__item">
+        <a href="http://weibo.com/ososboy" title="@Open-Source" target="_blank">
+          <i class='fa fa-weibo'></i>
+        </a>
+        </li>
+        <li class="navigation__item">
+        <a href="https://github.com/LinuxGit" title="Github" target="_blank">
+          <i class='fa fa-github'></i>
+        </a>
+        </li>
+        <li class="navigation__item">
+        <a href="#" title="WeiXin" target="_blank">
+          <i class='fa fa-weixin'></i>
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+    </div>
+    </div>
+  </div>
+  <div class="section " id="section1">
+    <div class="intro">
+      <h1>LinuxGit</h1>
+      <p>An easy and new way to learn Linux & Ruby.</p>
+    </div>
+  </div>
+  <div class="section" id="section2">
+    <div class="slide" id="slide1">
+      <div class="intro">
+        <h1>Linux</h1>
+        <p>Talk is cheap, show me the code.</p>
+      </div>
+    </div>
+
+    <div class="slide" id="slide2">
+      <div class="intro">
+        <h1>Ruby</h1>
+        <p>Happy coding.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="section" id="section3">
+    <div class="intro">
+      <h1>Enjoy it</h1>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#fullpage').fullpage({
+anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+sectionsColor: ['white', '#4BBFC3', '#7BAABE', '#1bbc9b'],
+navigation: true,
+navigationPosition: 'left',
+menu: '#menu'
+      });
+  });
+</script>
