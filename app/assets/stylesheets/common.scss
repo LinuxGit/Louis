@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  padding-top: 100px;
+  background: $bg-color;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 p {
     line-height: 1.1em;
 }
@@ -5,7 +18,7 @@ p {
 .devider {
   width:300px;
   height:1px;
-  margin:12px auto;
+  margin:14px auto;
   padding:0px;
   background-color:#D5D5D5;
   overflow:hidden;
@@ -15,9 +28,40 @@ p {
 .devider--secondary {
   width:150px;
   height:1px;
-  margin:12px auto;
+  margin:14px auto;
   padding:0px;
   background-color:#D5D5D5;
   overflow:hidden;
   opacity:0.6;
+}
+
+.navbar {
+    border: none;
+    background-color: $navbar-color;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-brand {
+  font-family: 'Montserrat';
+  color: white !important;
+  &:hover {
+    color: $bg-color !important;
+            };
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: $navbar-color;
+  }
+
+.btn-sm {
+    padding: 7px 15px;
+    border: none;
 }

@@ -1,9 +1,12 @@
 <% provide(:title, 'Home') %>
+<% content_for :home_header do %>
+  <%= javascript_include_tag 'jquery.fullPage.min', 'data-turbolinks-track' => true %>
+<% end %>
 
 <ul id="menu">
   <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
   <li><%= link_to 'Blog', '#' %></li>
-  <li><%= link_to 'About', '#' %></li>
+  <li><%= link_to 'About', about_path %></li>
 </ul>
 
 <div id="fullpage">
@@ -15,7 +18,6 @@
         </div>
       <% end %>
     </div>
-    <div class="container">
     <div class="intro">
       <div class="avatar">
       <%= image_tag("avatar.jpg", alt: "avatar") %>
@@ -26,44 +28,29 @@
       <p>And I'm a Linux SA who wants to be a Full Stack developer.</p>
       <div class="devider--secondary"></div>
       <p>It's a web about Design, Ruby, Rails, Python, Swift, Linux and Network.</p>
-      <button type="button" class="btn btn-primary btn-lg">Get Started</button>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-      <div class="navigation">
+
+      <div class="home_button">
+        <button type="button" class="btn btn-primary btn-lg">Get Started</button>
+      </div>
+
+      <div class="home_icon">
       <ul>
-        <li class="navigation__item">
-        <a href="https://github.com/LinuxGit" title="Github" target="_blank">
-          <i class='fa fa-github'></i>
-        </a>
-        </li>
-        <li class="navigation__item">
-        <a href="http://weibo.com/ososboy" title="@Open-Source" target="_blank">
-          <i class='fa fa-weibo'></i>
-        </a>
-        </li>
-        <li class="navigation__item">
-        <a href="https://github.com/LinuxGit" title="Github" target="_blank">
-          <i class='fa fa-github'></i>
-        </a>
-        </li>
-        <li class="navigation__item">
-        <a href="#" title="WeiXin" target="_blank">
-          <i class='fa fa-weixin'></i>
-        </a>
-        </li>
+        <li><a href="https://weibo.com/ososboy" target="_blank"><i class="social fa fa-weibo"></i></a></li>
+        <li><a href="https://github.com/LinuxGit" target="_blank"><i class="social fa fa-github"></i></a></li>
+        <li><a href="#"><i class="social fa fa-rss"></i></a></li>
+        <li><a href="#"><i class="social fa fa-envelope"></i></a></li>  
       </ul>
+      </div>
     </div>
   </div>
-  </div>
-    </div>
-    </div>
-  </div>
-  <div class="section " id="section1">
+
+  <div class="section" id="section1">
     <div class="intro">
       <h1>LinuxGit</h1>
       <p>An easy and new way to learn Linux & Ruby.</p>
     </div>
   </div>
+
   <div class="section" id="section2">
     <div class="slide" id="slide1">
       <div class="intro">
@@ -78,8 +65,8 @@
         <p>Happy coding.</p>
       </div>
     </div>
-
   </div>
+
   <div class="section" id="section3">
     <div class="intro">
       <h1>Enjoy it</h1>
